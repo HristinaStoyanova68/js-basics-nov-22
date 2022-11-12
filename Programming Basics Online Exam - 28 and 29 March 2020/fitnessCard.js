@@ -10,7 +10,7 @@
 function fitnessCard (input) {
     let money = Number(input[0]);
     let gender = (input[1]);
-    let age = (input[2]);
+    let age = Number(input[2]);
     let sport = (input[3]);
     
 
@@ -248,4 +248,4 @@ if (sport === "Pilates") {
 }
 }
 }
-fitnessCard(["20","f","15","Yoga"]);
+fitnessCard(["10","m","50","Pilates"]);

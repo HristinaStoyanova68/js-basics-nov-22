@@ -23,7 +23,7 @@ function energyBooster(input) {
             mangoPrice = 19.60;
             setPrice = countSet * 5 * mangoPrice;
             }        
-        } else if (fruit === "Pineapple") {
+    } else if (fruit === "Pineapple") {
         
             if (setSize === "small") {
                 pineapplePrice = 42.10;
@@ -32,7 +32,7 @@ function energyBooster(input) {
                 pineapplePrice = 24.80;
                 setPrice = countSet * 5 * pineapplePrice;
             }
-        } else if (fruit === "Raspberry") {
+    } else if (fruit === "Raspberry") {
         
             if (setSize === "small") {
                 raspberryPrice = 20;
