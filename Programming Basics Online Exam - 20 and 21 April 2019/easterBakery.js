@@ -5,13 +5,13 @@ function easterBakery(input) {
     let flourKg = Number(input[1]);
     let sugarKg = Number(input[2]);
     let eggsPackCount = Number(input[3]);
-    let weastPackCount = Number(input[4]);
+    let yeastPackCount = Number(input[4]);
 
     let sugarPrice = flourPrice * 0.75;
     let eggsPackPrice = flourPrice * 1.10;
-    let weastPackPrice = sugarPrice * 0.20;
+    let yeastPackPrice = sugarPrice * 0.20;
 
-    let totalSum = flourKg * flourPrice + sugarKg * sugarPrice + eggsPackCount * eggsPackPrice + weastPackCount * weastPackPrice;
+    let totalSum = flourKg * flourPrice + sugarKg * sugarPrice + eggsPackCount * eggsPackPrice + yeastPackCount * yeastPackPrice;
     
     console.log(totalSum.toFixed(2));
 }
