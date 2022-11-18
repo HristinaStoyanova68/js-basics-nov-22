@@ -9,8 +9,31 @@
 
 function easterParty(input) {
 
-    let countGust
+    let countGuest = Number(input[0]);
+    let pricePerPerson = Number(input[1]);
+    let budget = Number(input[2]);
+    let cakePrice = budget * 0.10;
+    let totalSum = 0.00;
 
+    let totalSumForGuests = countGuest * pricePerPerson;
+
+    if (countGuest < 10) {
+        totalSum = totalSumForGuests + cakePrice;
+    } else if (countGuest <= 15) {
+        totalSum = (totalSumForGuests * 0.85) + cakePrice;
+    } else if (countGuest <= 20) {
+        totalSum = (totalSumForGuests * 0.80) + cakePrice;
+    } else {
+        totalSum = (totalSumForGuests * 0.75) + cakePrice;
+    } if (budget >= totalSum) {
+        moneyLeft = budget - totalSum;
+        console.log(`It is party time! ${moneyLeft.toFixed(2)} leva left.`);
+    } else {
+        neededMoney = totalSum - budget;
+        console.log(`No party! ${neededMoney.toFixed(2)} leva needed.`);
+    }
+        
+    
 }
 
-easterParty(["18", "30", "450"]);
+easterParty(["24", "35", "550"]);
