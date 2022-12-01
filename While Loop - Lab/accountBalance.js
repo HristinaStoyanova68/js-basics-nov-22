@@ -15,6 +15,7 @@ function solve(input) {
         }
         totalSum += sum;
         sum = input[index];
+        
     }
     console.log(`Total: ${totalSum.toFixed(2)}`);
     
