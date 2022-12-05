@@ -23,7 +23,6 @@ function solve(input) {
                 break;
             }
         }
-
     } console.log(printLine);
 }
 
