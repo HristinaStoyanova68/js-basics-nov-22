@@ -11,25 +11,25 @@ function solve(input) {
     while (nameOfMovie !== "Finish") {
         let availableSpaces = Number(input[index]);
         index++;
-        let tipeOfTickets = input[index];
+        let typeOfTickets = input[index];
         index++;
 
         let spacesTaken = 0;
 
-        while (tipeOfTickets !== "End") {
+        while (typeOfTickets !== "End") {
 
             spacesTaken += 1;
-            if (tipeOfTickets === "student") {
+            if (typeOfTickets === "student") {
                 studentTicketsCount++;
-            } else if (tipeOfTickets === "standard") {
+            } else if (typeOfTickets === "standard") {
                 standardTicketsCount++;
-            } else if (tipeOfTickets === "kid") {
+            } else if (typeOfTickets === "kid") {
                 kidsTicketsCount++;
             }
             if (spacesTaken === availableSpaces) {
                 break;
             }
-            tipeOfTickets = input[index];
+            typeOfTickets = input[index];
             index++;
         }
         let percentFull = (spacesTaken / availableSpaces) * 100;
