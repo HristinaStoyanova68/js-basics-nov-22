@@ -3,14 +3,14 @@ function solve(input) {
     let chrysanthemumsCount = Number(input[0]);
     let rosesCount = Number(input[1]);
     let tulipsCount = Number(input[2]);
-    let seassons = input[3];
+    let seasons = input[3];
     let typeOfDay = input[4];
 
     let chrysanthemumsSum = 0;
     let rosesSum = 0;
     let tulipsSum = 0;
 
-    switch (seassons) {
+    switch (seasons) {
         case "Spring":
         case "Summer":
             chrysanthemumsSum = chrysanthemumsCount * 2.00;
@@ -32,10 +32,10 @@ function solve(input) {
     } else if (typeOfDay === "N") {
         totalSum = totalSum;
     }
-    if (seassons === "Spring" && tulipsCount > 7) {
+    if (seasons === "Spring" && tulipsCount > 7) {
         totalSum = totalSum * 0.95;
     }
-    if (seassons === "Winter" && rosesCount >= 10) {
+    if (seasons === "Winter" && rosesCount >= 10) {
         totalSum = totalSum * 0.90;
     }
     if ((chrysanthemumsCount + rosesCount + tulipsCount) > 20) {
