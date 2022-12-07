@@ -5,7 +5,7 @@ function fitnessCardShortcut(input) {
     let age = Number(input[2]);
     let sport = (input[3]);
 
-    if (gender === "m") {
+    if (gender === "m") {   
         if (sport === "Gym") {
             money = 42;
             } else if (sport === "Boxing") {
