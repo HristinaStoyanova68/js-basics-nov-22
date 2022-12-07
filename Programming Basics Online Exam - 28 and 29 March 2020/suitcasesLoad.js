@@ -11,7 +11,7 @@ function solve(input) {
 
         currsuitcaseVolume = Number(suitcaseVolume);
 
-        
+
         counter++;
         if (counter === 3) {
             currsuitcaseVolume *= 1.10;
@@ -27,15 +27,13 @@ function solve(input) {
         suitcaseVolume = input[index];
         index++;
     }
-    
-        console.log("Congratulations! All suitcases are loaded!");
-        console.log(`Statistic: ${counter} suitcases loaded.`);
-    
 
+    console.log("Congratulations! All suitcases are loaded!");
+    console.log(`Statistic: ${counter} suitcases loaded.`);
 }
 
 solve(["700.5",
-"180",
-"340.6",
-"126",
-"220"]);
+    "180",
+    "340.6",
+    "126",
+    "220"]);
