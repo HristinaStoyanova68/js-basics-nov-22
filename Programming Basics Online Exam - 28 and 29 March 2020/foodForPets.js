@@ -1,40 +1,48 @@
-// •	"Total eaten biscuits: {количество изядени бисквитки}gr."
-// •	"{процент изядена храна}% of the food has been eaten."
-// •	"{процент изядена храна от кучето}% eaten from the dog."
-// •	"{процент изядена храна от котката}% eaten from the cat."
+function solve(input) {
+    let index = 0;
+    let days = Number(input[index]);
+    index++;
+    let availableFood = Number(input[index]);
+    index++;
+    let allDogFood = 0;
+    let allCatFood = 0;
+    let allBiscuits = 0;
 
+    for (let i = 1; i <= days; i++) {
 
-function foodForPets(input) {
+        let currBiscuits = 0;
 
-    let countDays = Number(input[0]);
-    let allFood = Number(input[1]);
-    let dogFoodFirstDay = Number(input[2]);
-    let catFoodFirstDay = Number(input[3]);
-    let dogFoodSecDay = Number(input[4]);
-    let catFoodSecDay = Number(input[5]);
-    let dogFoodThirdDay = Number(input[6]);
-    let catFoodThirdDay = Number(input[7]);
-    
+        let currDogFood = Number(input[index]);
+        index++;
+        allDogFood += currDogFood;
 
-     let totalFoodFirstDay = dogFoodFirstDay + catFoodFirstDay;
-     let totalFoodSectDay = dogFoodSecDay + catFoodSecDay;
-     let totalFoodThirdtDay = dogFoodThirdDay + catFoodThirdDay;
+        let currCatFood = Number(input[index]);
+        index++;
+        allCatFood += currCatFood;
 
-     let allEatenFood = totalFoodFirstDay + totalFoodSectDay + totalFoodThirdtDay ;
-     let percentAllEatenFood = allEatenFood * 100 / allFood;
-     let totalEatenBiscuit = totalFoodThirdtDay * 0.10;
-     let allDogEatenFood = dogFoodFirstDay + dogFoodSecDay + dogFoodThirdDay;
-     let percentDogEatenFood = allDogEatenFood * 100 / allEatenFood;
-     let allCatEatenFood = catFoodFirstDay + catFoodSecDay + catFoodThirdDay;
-     let percentCatEatenFood = allCatEatenFood * 100 / allEatenFood;
+        if (i % 3 === 0) {
+            currBiscuits += (currDogFood + currCatFood) * 0.10;
+            allBiscuits += currBiscuits;
+        }
 
-     console.log(`Total eaten biscuits: ${Math.round(totalEatenBiscuit)}gr.`);
-     console.log(`${(percentAllEatenFood).toFixed(2)}% of the food has been eaten.`);
-     console.log(`${(percentDogEatenFood).toFixed(2)}% eaten from the dog.`);
-     console.log(`${(percentCatEatenFood).toFixed(2)}% eaten from the cat.`);
+    }
+    let eatenFood = allDogFood + allCatFood;
+    let percentEatenFood = eatenFood / availableFood * 100;
+    let percentDogFood = allDogFood / eatenFood * 100;
+    let percentCatFood = allCatFood / eatenFood * 100;
 
-
+    console.log(`Total eaten biscuits: ${Math.round(allBiscuits)}gr.`);
+    console.log(`${percentEatenFood.toFixed(2)}% of the food has been eaten.`);
+    console.log(`${percentDogFood.toFixed(2)}% eaten from the dog.`);
+    console.log(`${percentCatFood.toFixed(2)}% eaten from the cat.`);
 
 }
 
-foodForPets(["3", "500", "100", "30", "110", "25", "120", "35"]);
+solve(["3",
+    "500",
+    "100",
+    "30",
+    "110",
+    "25",
+    "120",
+    "35"]);
