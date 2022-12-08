@@ -16,7 +16,6 @@ function solve(input) {
 
         if (dartsArea === "Single") {
             if (currPoints > pointsLeft) {
-                pointsLeft = pointsLeft;
                 unsuccessCounter++;
             } else {
                 pointsLeft -= currPoints;
@@ -24,7 +23,6 @@ function solve(input) {
             }
         } else if (dartsArea === "Double") {
             if (2 * currPoints > pointsLeft) {
-                pointsLeft = pointsLeft;
                 unsuccessCounter++;
             } else {
                 pointsLeft -= 2 * currPoints;
@@ -32,7 +30,6 @@ function solve(input) {
             }
         } else if (dartsArea === "Triple") {
             if (3 * currPoints > pointsLeft) {
-                pointsLeft = pointsLeft;
                 unsuccessCounter++;
             } else {
                 pointsLeft -= 3 * currPoints;
