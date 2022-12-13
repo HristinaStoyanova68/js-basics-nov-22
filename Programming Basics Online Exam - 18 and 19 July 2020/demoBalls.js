@@ -16,32 +16,26 @@ function solve(input) {
 
     for (let i = 1; i <= nCountBalls; i++) {
 
-
-        switch (color) {
-            case "red":
-                redBalls++;
-                totalPoints += 5;
-                break;
-            case "orange":
-                orangeBalls++;
-                totalPoints += 10;
-                break;
-            case "yellow":
-                yellowBalls++;
-                totalPoints += 15;
-                break;
-            case "white":
-                whiteBalls++;
-                totalPoints += 20;
-                break;
-            case "black":
-                blackBalls++;
-                totalPoints = Math.floor(totalPoints / 2);
-                break;
-            default:
-                othersBalls++;
-                break;
+        if (color === "red") {
+            redBalls++;
+            totalPoints += 5;
+        } else if (color === "orange") {
+            orangeBalls++;
+            totalPoints += 10;
+        } else if (color === "yellow") {
+            yellowBalls++;
+            totalPoints += 15;
+        } else if (color === "white") {
+            whiteBalls++;
+            totalPoints += 20;
+        } else if (color === "black") {
+            blackBalls++;
+            totalPoints = Math.floor(totalPoints / 2);
+        } else {
+            othersBalls++;
         }
+
+
         color = input[index];
         index++;
     }
@@ -54,14 +48,15 @@ function solve(input) {
     console.log(`Divides from black balls: ${blackBalls}`);
 
 }
+
 solve(["10",
-"white",
-"white",
-"ee",
-"red",
-"orange",
-"red",
-"black",
-"black",
-"black",
-"black"]);
+    "white",
+    "white",
+    "ee",
+    "red",
+    "orange",
+    "red",
+    "black",
+    "black",
+    "black",
+    "black"]);
