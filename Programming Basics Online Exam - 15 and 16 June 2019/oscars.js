@@ -11,26 +11,19 @@ function solve(input) {
 
     for (let i = 1; i <= numOfAssessors; i++) {
         let nameOfAssessor = input[index];
-        let nameScore = nameOfAssessor.length;
         index++;
         let scoreOfAssessor = Number(input[index]);
         index++;
-        currScore = nameScore * scoreOfAssessor / 2;
+        currScore = nameOfAssessor.length * scoreOfAssessor / 2;
         scoreActor += currScore;
 
         if (scoreActor > 1250.5) {
-            break;
+            console.log(`Congratulations, ${nameOfActor} got a nominee for leading role with ${scoreActor.toFixed(1)}!`);
+            return;
         }
-        nameOfAssessor = input[index];
-
-
-    } if (scoreActor <= 1250.5) {
-        let neededScore = 1250.5 - scoreActor;
-        console.log(`Sorry, ${nameOfActor} you need ${neededScore.toFixed(1)} more!`);
-
-    } else {
-        console.log(`Congratulations, ${nameOfActor} got a nominee for leading role with ${scoreActor.toFixed(1)}!`);
     }
+    let neededScore = 1250.5 - scoreActor;
+    console.log(`Sorry, ${nameOfActor} you need ${neededScore.toFixed(1)} more!`);
 }
 
 solve(["Zahari Baharov",
