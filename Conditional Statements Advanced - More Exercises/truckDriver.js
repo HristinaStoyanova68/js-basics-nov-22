@@ -1,10 +1,10 @@
 function solve(input) {
 
-    let seasson = input[0];
+    let season = input[0];
     let kilometers = Number(input[1]);
     let pricePerKm = 0;
 
-    switch (seasson) {
+    switch (season) {
         case "Spring":
         case "Autumn":
             if (kilometers <= 5000) {
@@ -34,8 +34,8 @@ function solve(input) {
             }
             break;
     }
-    let seassonPrice = kilometers * 4 * pricePerKm;
-    let total = seassonPrice * 0.90;
+    let seasonPrice = kilometers * 4 * pricePerKm;
+    let total = seasonPrice * 0.90;
     console.log(total.toFixed(2));
 }
 
